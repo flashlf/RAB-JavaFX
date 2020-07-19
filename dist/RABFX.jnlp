@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="RABFX.jnlp">
+  <information>
+    <title>RABFX</title>
+    <vendor>CMetamorph</vendor>
+    <description>Aplikasi Penghitung Rencana Anggaran Biaya</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="RABFX.jar" size="510043" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.3.jar" size="260401" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="625012" download="eager" />
+    <jar href="lib\commons-digester-2.0.jar" size="161823" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="66901" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="576588" download="eager" />
+    <jar href="lib\forms-7.0.7.jar" size="75107" download="eager" />
+    <jar href="lib\groovy-2.5.6.jar" size="5854517" download="eager" />
+    <jar href="lib\io-7.0.7.jar" size="825640" download="eager" />
+    <jar href="lib\jasperreports-6.7.1.jar" size="5922960" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.7.1.jar" size="5931973" download="eager" />
+    <jar href="lib\jfoenix-8.0.10.jar" size="2809779" download="eager" />
+    <jar href="lib\kernel-7.0.7.jar" size="1117154" download="eager" />
+    <jar href="lib\layout-7.0.7.jar" size="410755" download="eager" />
+    <jar href="lib\log4j-1.2.17.jar" size="520312" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="860932" download="eager" />
+    <jar href="lib\slf4j-api-1.7.25.jar" size="46710" download="eager" />
+    <jar href="lib\slf4j-log4j12-1.7.25.jar" size="15100" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="RABFX" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="rabfx.RABFX"  name="RABFX" />
+  <update check="always"/>
+</jnlp>
