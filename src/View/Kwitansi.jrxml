@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Kwitansi" language="groovy" pageWidth="609" pageHeight="400" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="569" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="79e1cb37-55e0-4c1c-a29a-0907ad492af9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="menerima" class="java.lang.String"/>
+	<parameter name="menyerahkan" class="java.lang.String"/>
+	<parameter name="shortTotal" class="java.lang.String"/>
+	<parameter name="terbilangTotal" class="java.lang.String"/>
+	<parameter name="noKwitansi" class="java.lang.String"/>
+	<parameter name="konsumen" class="java.lang.String"/>
+	<parameter name="tglKwitansi" class="java.lang.String"/>
+	<parameter name="deskripsiPembayaran" class="java.lang.String"/>
+	<parameter name="pathWatermark" class="java.lang.String"/>
+	<parameter name="pathLogoHeader" class="java.lang.String"/>
+	<background>
+		<band height="271" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="Clip">
+				<reportElement x="308" y="67" width="260" height="204" uuid="6210892c-4990-4a6c-a483-38f089acd263"/>
+				<imageExpression><![CDATA[$P{pathWatermark}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<textField>
+				<reportElement x="421" y="22" width="134" height="20" uuid="020a2a8e-afcd-4ed2-8d90-df262651a108"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{noKwitansi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="212" y="9" width="134" height="38" uuid="f87de493-5c4b-4583-af7c-9fe41a61cfa1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI Semibold" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KWITANSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="22" width="19" height="20" uuid="3a948877-db28-4fc2-8cb5-8064a258c50d"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="29" y="1" width="79" height="66" uuid="6bca3e1f-d8cf-4602-8a9f-279e2dc3c7ec"/>
+				<imageExpression><![CDATA[$P{pathLogoHeader}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="421" y="42" width="134" height="1" uuid="c1799af5-06fe-4d43-8db4-42d91e3d29cc"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="181" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="0" width="608" height="181" backcolor="#C1D1E0" uuid="20eb6512-2af5-4f63-8481-29150c1e2d2e"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#C1D1E0"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="180" y="48" width="361" height="1" forecolor="#FFFFFF" uuid="03a1068d-6ac1-4e25-907d-8b17b1a949da"/>
+			</line>
+			<line>
+				<reportElement x="170" y="61" width="361" height="1" forecolor="#FFFFFF" uuid="257fcb9d-3631-4c55-9bcd-532cd2eb7339"/>
+			</line>
+			<line>
+				<reportElement x="160" y="74" width="361" height="1" forecolor="#FFFFFF" uuid="d38228f1-a602-41f7-b4b9-a77afdf9085b"/>
+			</line>
+			<line>
+				<reportElement x="150" y="86" width="361" height="1" forecolor="#FFFFFF" uuid="0da5fb28-ae9b-4a25-ac6c-6c88f58b10c4"/>
+			</line>
+			<line>
+				<reportElement x="139" y="100" width="361" height="1" forecolor="#FFFFFF" uuid="1d1e3b65-1f97-4319-99f2-2ac1146de06c"/>
+			</line>
+			<line>
+				<reportElement x="160" y="152" width="361" height="1" forecolor="#FFFFFF" uuid="dd1a169b-5475-478c-8aed-12dae2db3263"/>
+			</line>
+			<line>
+				<reportElement x="170" y="139" width="361" height="1" forecolor="#FFFFFF" uuid="a59a480d-d113-48c4-93eb-7ce48a2a18cf"/>
+			</line>
+			<line>
+				<reportElement x="180" y="126" width="361" height="1" forecolor="#FFFFFF" uuid="4dd25cb2-6f7e-4d60-a8d2-33ed70c5e662"/>
+			</line>
+			<line>
+				<reportElement x="150" y="166" width="361" height="1" forecolor="#FFFFFF" uuid="9472ef46-b825-425d-8b52-c608e1fcd158"/>
+			</line>
+			<staticText>
+				<reportElement x="29" y="6" width="100" height="20" uuid="dae2f7e3-696e-401c-b6a3-22df322162c8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<text><![CDATA[Telah diterima dari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="35" width="100" height="20" uuid="d13da4d1-6e3a-49c9-b06c-96ab55ad2761"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<text><![CDATA[Uang sebesar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="114" width="100" height="20" uuid="7db5ac95-cd8b-49d8-a79a-dcc1303f1992"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<text><![CDATA[Untuk pembayaran]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="6" width="361" height="20" forecolor="#123456" uuid="6654dd79-4cf2-417a-b1be-d1de1705c739"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{konsumen}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="160" y="26" width="361" height="1" uuid="7314c607-d44c-4c5a-9e7d-b5b75b920277"/>
+			</line>
+			<textField>
+				<reportElement x="160" y="35" width="361" height="69" forecolor="#123456" uuid="dda8dff0-ce45-4927-8e8f-7c3f8f60108a"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Segoe UI" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{terbilangTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="114" width="361" height="60" forecolor="#123456" uuid="e0573791-c05f-4c8d-9b5c-acca4aaa8653"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Segoe UI" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{deskripsiPembayaran}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="6" width="10" height="20" uuid="b526e9ff-d2e1-46a5-93a9-b23a21fe4f03"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="35" width="10" height="20" uuid="7a8a0892-7ad6-4a7a-b2f5-3bf2f326eb4d"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="114" width="10" height="20" uuid="9f63169d-9b5a-4a78-aa63-c578dd335d71"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="246" y="24" width="100" height="20" uuid="9bab2f09-f945-4c8d-9f61-d75751458a4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<text><![CDATA[Yang Menyerahkan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="24" width="100" height="20" uuid="209d32b8-122f-46b3-b3f5-419252afcccf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<text><![CDATA[Yang Menerima]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="227" y="88" width="139" height="21" uuid="0ff1a72c-48ad-492b-b0a4-5c4d666ae408"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{menyerahkan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="88" width="139" height="21" uuid="e019d50e-8032-44fc-b26f-4e8d26a9ecce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{menerima}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="139" height="21" uuid="3fef51ff-9e9f-4541-9c85-6cf0a01cd275"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tglKwitansi}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="329" y="15" width="134" height="1" uuid="bacfab8f-09ed-4748-8225-9808b1ab7497"/>
+			</line>
+			<line>
+				<reportElement x="45" y="80" width="131" height="1" forecolor="#D6D6D6" uuid="e01573da-14a8-4a89-b06f-5ff8889828de"/>
+			</line>
+			<line>
+				<reportElement x="50" y="70" width="131" height="1" forecolor="#D6D6D6" uuid="84463567-8cb5-4c93-bcd9-e22e398e5588"/>
+			</line>
+			<line>
+				<reportElement x="55" y="60" width="131" height="1" forecolor="#D6D6D6" uuid="606a99d6-ab5e-4e75-9f7b-8c115edef017"/>
+			</line>
+			<line>
+				<reportElement x="60" y="50" width="131" height="1" forecolor="#D6D6D6" uuid="4607b4c4-dedb-4ca4-807c-c1a5fe9cce19"/>
+			</line>
+			<line>
+				<reportElement x="65" y="40" width="131" height="1" forecolor="#D6D6D6" uuid="3bec323d-d1e6-4aa6-a79c-1c78c687ff5f"/>
+			</line>
+			<textField>
+				<reportElement x="49" y="31" width="139" height="56" uuid="6ba2765a-bbf7-4fbe-99de-dacb2d4aed15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="32" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{shortTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="40" width="52" height="38" forecolor="#123456" uuid="3c8217fd-ca19-4df4-afc6-30f5087eb68c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RP.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="429" y="109" width="139" height="1" uuid="2b1346e9-c06f-4e01-9457-fb43159b6cec"/>
+			</line>
+			<line>
+				<reportElement x="227" y="109" width="139" height="1" uuid="fff8330e-1cd5-47e9-8409-53a293c279fa"/>
+			</line>
+		</band>
+	</columnFooter>
+</jasperReport>

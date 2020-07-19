@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #123456;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KonsumenController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tblKonsumen" layoutX="430.0" layoutY="136.0" onMouseClicked="#getData" prefHeight="237.0" prefWidth="344.0" styleClass="panel-input" />
+      <Label layoutX="28.0" layoutY="27.0" text="DATA KONSUMEN" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="26.0" />
+         </font>
+      </Label>
+      <HBox layoutX="28.0" layoutY="188.0" prefHeight="132.0" prefWidth="372.0" styleClass="panel-input">
+         <children>
+            <OctIconView fill="#f3c623" glyphName="LOCATION" size="24" wrappingWidth="24.0">
+               <HBox.margin>
+                  <Insets left="7.0" right="3.0" top="7.0" />
+               </HBox.margin>
+            </OctIconView>
+            <TextArea fx:id="txAlamat" prefHeight="132.0" prefWidth="348.0" />
+         </children>
+      </HBox>
+      <Button fx:id="btnAdd" layoutX="28.0" layoutY="341.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addData" prefHeight="32.0" prefWidth="98.0" styleClass="panel-input" text="ADD">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="PLUS" size="16" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnEdit" layoutX="142.0" layoutY="341.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#editData" prefHeight="32.0" prefWidth="98.0" styleClass="panel-input" text="EDIT">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="PENCIL" size="16" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnDel" layoutX="256.0" layoutY="341.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteData" prefHeight="32.0" prefWidth="98.0" styleClass="panel-input" text="DELETE">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="MINUS" size="16" />
+         </graphic>
+      </Button>
+      <HBox id="pnlUsername" layoutX="28.0" layoutY="85.0" prefHeight="34.0" prefWidth="120.0" styleClass="panel-input">
+         <children>
+            <MaterialDesignIconView glyphName="KEY_VARIANT" size="24" strokeLineCap="ROUND" strokeType="INSIDE" styleClass="glyphs-icon" wrappingWidth="24.0">
+               <HBox.margin>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="4.0" />
+               </HBox.margin>
+            </MaterialDesignIconView>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <TextField fx:id="txKode" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="80.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox id="pnlUsername" layoutX="172.0" layoutY="85.0" prefHeight="34.0" prefWidth="228.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="32.0" prefWidth="71.0" style="-fx-background-color: #f3c623;" text="Nama" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <TextField fx:id="txNama" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox id="pnlUsername" layoutX="28.0" layoutY="136.0" prefHeight="25.0" prefWidth="161.0" styleClass="panel-input">
+         <children>
+            <MaterialDesignIconView glyphName="CELLPHONE_ANDROID" size="24" strokeLineCap="ROUND" strokeType="INSIDE" styleClass="glyphs-icon" wrappingWidth="24.0">
+               <HBox.margin>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="4.0" />
+               </HBox.margin>
+            </MaterialDesignIconView>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <TextField fx:id="txNomer" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="120.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox id="pnlUsername" layoutX="430.0" layoutY="85.0" prefHeight="34.0" prefWidth="344.0" styleClass="panel-input">
+         <children>
+            <TextField fx:id="txSearch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="281.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </padding>
+            </TextField>
+            <Button fx:id="btnSearch" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#searchData" prefHeight="32.0" prefWidth="66.0" text="Search">
+               <graphic>
+                  <FontAwesomeIconView glyphName="SEARCH" size="14" styleClass="thumbnail-icon" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

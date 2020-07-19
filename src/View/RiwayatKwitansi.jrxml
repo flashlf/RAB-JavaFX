@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subKwitansi" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5c294e1b-9158-4113-83b9-f5974bd15add">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="AlternateColor" mode="Opaque" forecolor="#FFFFFF" backcolor="#123456">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2==1]]></conditionExpression>
+			<style mode="Opaque" backcolor="#2B6099"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="noKwitansi" class="java.lang.String">
+		<defaultValueExpression><![CDATA[KW01]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     riwayatkwitansi.`tglKwitansi` AS riwayatkwitansi_tglKwitansi,
+     riwayatkwitansi.`bayarNya` AS riwayatkwitansi_bayarNya,
+     riwayatkwitansi.`menyerahkan` AS riwayatkwitansi_menyerahkan,
+     riwayatkwitansi.`menerima` AS riwayatkwitansi_menerima
+FROM
+     `riwayatkwitansi` riwayatkwitansi
+WHERE
+     riwayatkwitansi.`noKwitansi` = $P{noKwitansi}]]>
+	</queryString>
+	<field name="riwayatkwitansi_tglKwitansi" class="java.sql.Date"/>
+	<field name="riwayatkwitansi_bayarNya" class="java.lang.Double"/>
+	<field name="riwayatkwitansi_menyerahkan" class="java.lang.String"/>
+	<field name="riwayatkwitansi_menerima" class="java.lang.String"/>
+	<variable name="sumBayar" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{riwayatkwitansi_bayarNya}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="150" y="0" width="94" height="20" forecolor="#FFFFFF" backcolor="#000000" uuid="53366e6c-a2ec-4a3a-976a-6a55429a08e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="432" y="0" width="122" height="20" forecolor="#FFFFFF" backcolor="#000000" uuid="365f66b1-1716-45ca-85f7-afcc1d40ab33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="244" y="0" width="94" height="20" forecolor="#FFFFFF" backcolor="#000000" uuid="b834f5da-261e-4bac-a248-368afe5192c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pembayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="338" y="0" width="94" height="20" forecolor="#FFFFFF" backcolor="#000000" uuid="8d3a9ce4-856a-46fe-a03c-be1fed8690d9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Penerima]]></text>
+			</staticText>
+			<line>
+				<reportElement x="150" y="20" width="403" height="1" forecolor="#FFFFFF" uuid="12fba0e6-a99c-4cc3-b452-48e289957281"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="AlternateColor" mode="Opaque" x="150" y="0" width="94" height="20" uuid="c2e98e5d-3101-466f-84d3-e41e85e77eca">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{riwayatkwitansi_tglKwitansi}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement style="AlternateColor" mode="Opaque" x="432" y="0" width="122" height="20" uuid="ae22a529-d5c6-4a9d-be9c-8b4578b5a0c3">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{riwayatkwitansi_bayarNya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="AlternateColor" mode="Opaque" x="244" y="0" width="94" height="20" uuid="117308aa-c4ef-40c2-bfa1-ed60f3e2f1df">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{riwayatkwitansi_menyerahkan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="AlternateColor" mode="Opaque" x="338" y="0" width="94" height="20" uuid="ab25d5e6-7b39-47e5-8459-5c2444b14533">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{riwayatkwitansi_menerima}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="150" y="0" width="282" height="18" uuid="c3ee3da0-bfaa-46fb-a34e-2fa109971b5e">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Rp.]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement mode="Opaque" x="432" y="0" width="122" height="18" uuid="87a7e1c9-8e3f-4787-b758-99037149e082">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true" isItalic="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sumBayar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="518.0" style="-fx-background-color: #123456;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MasterKoordinatorController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="14.0" layoutY="322.0" text="Jabatan Koordinator" textFill="WHITE" />
+      <Label layoutX="14.0" layoutY="262.0" text="Kode Koordinator" textFill="WHITE" />
+      <TextField fx:id="txKode" layoutX="14.0" layoutY="285.0" prefHeight="27.0" prefWidth="104.0" styleClass="panel-input" />
+      <TextField fx:id="txTelepon" layoutX="238.0" layoutY="346.0" prefHeight="27.0" prefWidth="160.0" styleClass="panel-input" />
+      <Label layoutX="239.0" layoutY="322.0" text="Telepon Koordinator" textFill="WHITE" />
+      <TextField fx:id="txNama" layoutX="138.0" layoutY="285.0" prefHeight="27.0" prefWidth="160.0" styleClass="panel-input" />
+      <Label layoutX="139.0" layoutY="262.0" text="Nama Koordinator" textFill="WHITE" />
+      <HBox layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="500.0">
+         <children>
+            <TextField fx:id="txSearch" prefHeight="25.0" prefWidth="496.0" styleClass="panel-input">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnSearch" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#searchData" prefHeight="25.0" prefWidth="76.0" styleClass="panel-input" text="SEARCH">
+               <graphic>
+                  <MaterialDesignIconView glyphName="MAGNIFY" size="16" styleClass="glyph-icon" wrappingWidth="16.0" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="tblKoordinator" layoutX="14.0" layoutY="50.0" onMouseClicked="#getData" prefHeight="200.0" prefWidth="500.0" styleClass="panel-input" />
+      <Button fx:id="btnAdd" contentDisplay="GRAPHIC_ONLY" layoutX="458.0" layoutY="269.0" mnemonicParsing="false" onAction="#addData" prefHeight="32.0" prefWidth="56.0" styleClass="panel-input" text="ADD">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="PLUS_BOX" size="18" styleClass="glyph-icon" wrappingWidth="18.0" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnEdit" contentDisplay="GRAPHIC_ONLY" layoutX="458.0" layoutY="320.0" mnemonicParsing="false" onAction="#editData" prefHeight="32.0" prefWidth="56.0" styleClass="panel-input" text="EDIT">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="TABLE_EDIT" size="18" styleClass="glyph-icon" wrappingWidth="18.0" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnDelete" contentDisplay="GRAPHIC_ONLY" layoutX="458.0" layoutY="371.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="32.0" prefWidth="56.0" styleClass="panel-input" text="DELETE">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="MINUS_BOX" size="18" styleClass="glyph-icon" wrappingWidth="18.0" />
+         </graphic>
+      </Button>
+      <TextField fx:id="txJabatan" layoutX="14.0" layoutY="346.0" prefHeight="27.0" prefWidth="201.0" styleClass="panel-input" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

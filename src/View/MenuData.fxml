@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuDataController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <Separator layoutY="1.0" prefHeight="0.0" prefWidth="720.0" />
+      <Button fx:id="btnMaterial" contentDisplay="TOP" layoutX="252.0" layoutY="200.0" mnemonicParsing="false" onAction="#openMaterial" prefHeight="153.0" prefWidth="200.0" text="Material" textFill="WHITE">
+         <styleClass>
+            <String fx:value="tile-panel" />
+            <String fx:value="yellow" />
+         </styleClass>
+         <graphic>
+            <MaterialDesignIconView fill="#ffbc5e" glyphName="CUBE_OUTLINE" size="64" wrappingWidth="64.0">
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.32" color="#d7851a" height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+               </effect>
+            </MaterialDesignIconView>
+         </graphic>
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" />
+         </effect>
+      </Button>
+      <Button fx:id="btnTenaga" contentDisplay="TOP" layoutX="29.0" layoutY="200.0" mnemonicParsing="false" onAction="#openTenaga" prefHeight="153.0" prefWidth="200.0" text="Tenaga" textFill="WHITE">
+         <styleClass>
+            <String fx:value="tile-panel" />
+            <String fx:value="red" />
+         </styleClass>
+         <graphic>
+            <MaterialDesignIconView fill="#ff5542" glyphName="JIRA" size="64" wrappingWidth="64.0">
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.32" color="#9c2c1e9a" height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+               </effect>
+            </MaterialDesignIconView>
+         </graphic>
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" />
+         </effect>
+      </Button>
+      <Button fx:id="btnUser" contentDisplay="TOP" layoutX="478.0" layoutY="27.0" mnemonicParsing="false" onAction="#openUser" prefHeight="153.0" prefWidth="200.0" text="Manage User" textFill="WHITE">
+         <styleClass>
+            <String fx:value="tile-panel" />
+            <String fx:value="purple" />
+         </styleClass>
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" />
+         </effect>
+         <graphic>
+            <MaterialDesignIconView fill="#b360d6" glyphName="ACCOUNT_KEY" size="64" wrappingWidth="64.0">
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.32" color="#5a336b66" height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+               </effect>
+            </MaterialDesignIconView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnKonsumen" contentDisplay="TOP" layoutX="255.0" layoutY="27.0" mnemonicParsing="false" onAction="#openKonsumen" prefHeight="153.0" prefWidth="200.0" text="Konsumen" textFill="WHITE">
+         <styleClass>
+            <String fx:value="tile-panel" />
+            <String fx:value="blue" />
+         </styleClass>
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" />
+         </effect>
+         <graphic>
+            <MaterialDesignIconView fill="#94bfeb" glyphName="ACCOUNT_MULTIPLE" size="64" wrappingWidth="64.0">
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.32" color="#3f698f73" height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+               </effect>
+            </MaterialDesignIconView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnProyek" contentDisplay="TOP" layoutX="29.0" layoutY="27.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openProyek" prefHeight="153.0" prefWidth="200.0" text="Proyek" textFill="WHITE">
+         <styleClass>
+            <String fx:value="tile-panel" />
+            <String fx:value="cyan" />
+         </styleClass>
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" />
+         </effect>
+         <graphic>
+            <MaterialDesignIconView fill="#74e4ee" glyphName="DOMAIN" size="64" wrappingWidth="64.0">
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.32" color="#18a1aba5" height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+               </effect>
+            </MaterialDesignIconView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnKoordinator" contentDisplay="TOP" layoutX="478.0" layoutY="200.0" mnemonicParsing="false" onAction="#openKoordinator" prefHeight="153.0" prefWidth="200.0" text="Koordinator" textFill="WHITE">
+         <styleClass>
+            <String fx:value="tile-panel" />
+            <String fx:value="navy" />
+         </styleClass>
+         <graphic>
+            <MaterialDesignIconView fill="#5a9de1" glyphName="MATH_COMPASS" size="64" wrappingWidth="64.0">
+               <effect>
+                  <InnerShadow blurType="GAUSSIAN" choke="0.32" color="#30699e" height="15.0" offsetX="1.0" offsetY="1.0" radius="7.0" width="15.0" />
+               </effect>
+            </MaterialDesignIconView>
+         </graphic>
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000080" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

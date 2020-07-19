@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="336.0" prefWidth="643.0" style="-fx-background-color: #123456;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Controller.AboutController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="128.0" fitWidth="147.0" layoutX="54.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@assets/Dashboard-Ava.png" />
+         </image>
+         <effect>
+            <DropShadow color="WHITE" height="10.0" radius="4.5" spread="1.0" width="10.0" />
+         </effect>
+      </ImageView>
+      <Separator layoutX="205.0" layoutY="116.0" prefHeight="0.0" prefWidth="372.0" styleClass="panel-input" />
+      <Label layoutX="234.0" layoutY="61.0" text="RAB Software v.1.2" textFill="#f3c623">
+         <font>
+            <Font name="Segoe UI Bold" size="36.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="githubLink" fill="#f3c623" glyphName="INFO_CIRCLE" layoutX="205.0" layoutY="82.0" onMouseClicked="#openSourceProject" size="16" wrappingWidth="16.0" />
+      <Label alignment="TOP_LEFT" layoutX="224.0" layoutY="137.0" prefHeight="73.0" prefWidth="353.0" text="RAB merupakan kepanjangan dari Rencana Anggaran Biaya,  Program ini dibuat untuk mempermudah perhitungan Anggaran Biaya pada suatu proyek konstruksi bangunan. Software ini dibuat untuk memenuhi persyaratan skripsi untuk jurusan Informatika" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+      <Label fx:id="linkFB" graphicTextGap="6.0" layoutX="54.0" layoutY="209.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openFacebook" prefHeight="24.0" prefWidth="128.0" text="Facebook" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="#f3c623" glyphName="FACEBOOK_SQUARE" size="16" wrappingWidth="16.0" />
+         </graphic>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label fx:id="linkGithub" graphicTextGap="6.0" layoutX="54.0" layoutY="231.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openGithub" prefHeight="24.0" prefWidth="128.0" text="Github" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="#f3c623" glyphName="GITHUB_SQUARE" size="16" wrappingWidth="16.0" />
+         </graphic>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label fx:id="linkLinkedIn" graphicTextGap="6.0" layoutX="54.0" layoutY="255.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openLinkedIn" prefHeight="24.0" prefWidth="128.0" text="LinkedIn" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="#f3c623" glyphName="LINKEDIN_SQUARE" size="16" wrappingWidth="16.0" />
+         </graphic>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label layoutX="224.0" layoutY="210.0" prefHeight="44.0" prefWidth="353.0" text="Terima Kasih untuk RE; 2016 atas segala kekompakan dan memorinya" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="224.0" layoutY="254.0" prefHeight="36.0" prefWidth="353.0" text="&quot;Buka Mata, Buka Telinga&quot; - LUMEN*" textFill="#c8c9cc" wrapText="true">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

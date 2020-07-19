@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="369.0" style="-fx-background-color: #123456;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.KwitansiController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <HBox id="pnlUsername" layoutX="34.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="297.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="28.0" prefWidth="143.0" style="-fx-background-color: #f3c623;" text="No. Kwitansi" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="2.0" />
+            <TextField fx:id="txNoKwitansi" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="169.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox id="pnlUsername" layoutX="36.0" layoutY="256.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="297.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="28.0" prefWidth="92.0" style="-fx-background-color: #f3c623;" text="Bayar" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="2.0" />
+            <TextField fx:id="txBayar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="201.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <Label layoutX="38.0" layoutY="216.0" text="Total Biaya Proyek :" textFill="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblJumlahBayar" layoutX="38.0" layoutY="233.0" prefHeight="17.0" prefWidth="117.0" text="1.612.233.551.500.000" textFill="WHITE" />
+      <Label layoutX="188.0" layoutY="216.0" prefHeight="17.0" prefWidth="151.0" text="Jumlah yang Harus Dibayar" textFill="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSisaBayarKwitansi" layoutX="188.0" layoutY="233.0" prefHeight="17.0" prefWidth="130.0" text="1.612.233.551.500.000" textFill="WHITE" />
+      <Label layoutX="36.0" layoutY="114.0" prefHeight="17.0" prefWidth="48.0" text="Proyek" textFill="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProyek" alignment="TOP_LEFT" layoutX="100.0" layoutY="114.0" prefHeight="58.0" prefWidth="227.0" text="Rancangan masukan yaitu desain yang dirancang untuk menerimamasukan dari pengguna sistem. Rancangan masukan data ini harus dapatmemberikan penjelasan dari pemakai, baik dari bentuk maupun dari masukanmasukanyang harus di isi." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+      <Label layoutX="36.0" layoutY="183.0" text="Konsumen" textFill="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblKonsumen" layoutX="100.0" layoutY="183.0" prefHeight="17.0" prefWidth="227.0" text="PT. Timah Tbk." textFill="WHITE" />
+      <Button fx:id="btnPrint" layoutX="207.0" layoutY="425.0" mnemonicParsing="false" onAction="#printKwitansi" prefHeight="32.0" prefWidth="124.0" styleClass="panel-input" text="Print Surat">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="PRINTER" size="18" styleClass="glyph-icon" wrappingWidth="18.0" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="38.0" layoutY="425.0" mnemonicParsing="false" onAction="#clearAll" prefHeight="32.0" prefWidth="124.0" styleClass="panel-input" text="Batal">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="CLOSE_OCTAGON" size="18" styleClass="glyph-icon" wrappingWidth="18.0" />
+         </graphic>
+      </Button>
+      <Separator layoutX="29.0" layoutY="206.0" prefHeight="3.0" prefWidth="312.0" styleClass="panel-input" />
+      <ComboBox fx:id="cbSPH" layoutX="162.0" layoutY="73.0" onAction="#getDetailSPH" prefHeight="27.0" prefWidth="117.0" styleClass="panel-input" />
+      <Label layoutX="100.0" layoutY="73.0" prefHeight="27.0" prefWidth="55.0" text="No. SPH" textFill="#f3c623">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txMenerima" layoutX="132.0" layoutY="338.0" prefHeight="27.0" prefWidth="201.0" styleClass="panel-input" />
+      <TextField fx:id="txMenyerahkan" layoutX="132.0" layoutY="377.0" prefHeight="27.0" prefWidth="201.0" styleClass="panel-input" />
+      <Label fx:id="lblSisaBayar1" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="338.0" prefHeight="27.0" prefWidth="80.0" text="Menerima" textAlignment="RIGHT" textFill="WHITE" />
+      <Label fx:id="lblSisaBayar11" alignment="CENTER_RIGHT" layoutX="41.0" layoutY="377.0" prefHeight="27.0" prefWidth="80.0" text="Menyerahkan" textAlignment="RIGHT" textFill="WHITE" />
+      <Label layoutX="135.0" layoutY="295.0" text="Sisa yang harus dibayar :" textFill="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSisaBayar" layoutX="135.0" layoutY="312.0" prefHeight="17.0" prefWidth="130.0" text="1.612.233.551.500.000" textFill="WHITE" />
+   </children>
+</AnchorPane>

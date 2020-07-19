@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HeadRiwayatKwitansi" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0830637d-ab3e-4e3b-a939-924cdfef0209">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\helos\\Documents\\Project\\RABFX\\src\\View\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pathLogoHeader" class="java.lang.String"/>
+	<parameter name="pathWatermark" class="java.lang.String"/>
+	<parameter name="pathSubReport" class="java.lang.String">
+		<defaultValueExpression><![CDATA["O:\\IMAM\\RPL\\PEMROGRAMMAN VISUAL\\JavaFX\\RABFX\\src\\View\\RiwayatKwitansi.jasper"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     kwitansi.`noKwitansi` AS kwitansi_noKwitansi,
+     kwitansi.`jumlahBayar` AS kwitansi_jumlahBayar,
+     kwitansi.`sisaBayar` AS kwitansi_sisaBayar,
+     kwitansi.`kdProyek` AS kwitansi_kdProyek,
+     konsumen.`nmKonsumen` AS namaKonsumen,
+     kwitansi.`noSPH` AS kwitansi_noSPH
+FROM
+     `kwitansi` kwitansi, konsumen
+WHERE
+     kwitansi.kdKonsumen = konsumen.kdKonsumen;]]>
+	</queryString>
+	<field name="kwitansi_noKwitansi" class="java.lang.String"/>
+	<field name="kwitansi_jumlahBayar" class="java.lang.Double"/>
+	<field name="kwitansi_sisaBayar" class="java.lang.Double"/>
+	<field name="kwitansi_kdProyek" class="java.lang.String"/>
+	<field name="namaKonsumen" class="java.lang.String"/>
+	<field name="kwitansi_noSPH" class="java.lang.String"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="Clip" isUsingCache="false" onErrorType="Icon">
+				<reportElement x="296" y="545" width="259" height="257" uuid="c826907c-4552-4d36-87e9-679d54a90a7f"/>
+				<imageExpression><![CDATA[$P{pathWatermark}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="-1" width="379" height="34" forecolor="#123456" uuid="c37c2794-5f9f-4258-9dbc-f9fc95e9b6b9">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Segoe UI" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. SYALAM UTAMA SEJAHTERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="33" width="342" height="46" uuid="3005bce3-6a9f-4fd3-a763-a1221cf02b79"/>
+				<textElement textAlignment="Left">
+					<font fontName="Times New Roman" size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Raya Hankam No.10F, Kel. Jati Warna, Kec. Pondok Melati, RT.006/RW.009, Kota Bekasi, Jawa Barat 17415.
+Email : syalamutamasejahtera@gmail.com, Telp. (021) 8498 1190]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="79" width="555" height="1" uuid="0db8d6a1-c0f4-4756-a057-093830a6274b"/>
+				<graphicElement>
+					<pen lineWidth="2.5" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image isUsingCache="false" onErrorType="Icon">
+				<reportElement x="25" y="1" width="64" height="64" uuid="b80c3e8b-ef8d-4303-8c67-e656549fd357"/>
+				<imageExpression><![CDATA[$P{pathLogoHeader}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="44" forecolor="#FFFFFF" backcolor="#123456" uuid="d4efe14f-daa0-4c02-852a-65981696fd20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="398" y="11" width="39" height="20" forecolor="#FFFFFF" uuid="fdc83b05-a2ae-4560-9e6a-05ee767f0aaa"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="437" y="11" width="96" height="20" forecolor="#FFFFFF" uuid="f15bc8da-a320-4296-bb40-1cf8348f1a65"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="7" width="364" height="27" forecolor="#F3C623" uuid="f8067d5b-e936-4ad6-a3fd-25c9a93284d8">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Riwayat Transaksi]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="185" splitType="Stretch">
+			<rectangle>
+				<reportElement x="62" y="0" width="492" height="185" forecolor="#F2F2F2" backcolor="#EFEFEF" uuid="e1e364aa-3120-4291-93cf-4dd6b229fde9"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="c0573695-9625-4e4f-85e0-0df014931aa3"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="70" y="48" width="52" height="18" uuid="50ebe201-aa08-4134-9b6c-b12d6be02d49"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[No. SPH :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="28" width="385" height="20" uuid="2bcc1bf1-a856-4d8a-9098-9e02c55c8753"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["No : "+$F{kwitansi_noKwitansi}+", Klien :"+$F{namaKonsumen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="119" y="48" width="122" height="18" uuid="ff26f93f-9c7f-4d50-b6ad-e3d71559557f">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="false" isItalic="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kwitansi_noSPH}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement mode="Transparent" x="435" y="48" width="119" height="18" uuid="6c99e663-e7a1-4bba-82b1-f5f0c6d7efb7">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="false" isItalic="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kwitansi_jumlahBayar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="369" y="48" width="66" height="18" uuid="d8502563-777a-4624-b993-136bfdf650ad"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Total Biaya :]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="-19" y="66" width="592" height="100" uuid="a262817a-5cd5-4050-a3cb-b7410d1fe290"/>
+				<subreportParameter name="noKwitansi">
+					<subreportParameterExpression><![CDATA[$F{kwitansi_noKwitansi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{pathSubReport}]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="358" y="166" width="77" height="18" uuid="a6acc68d-5bf1-42d0-a748-9600a45da451"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Sisa Bayar :]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;#,##0.00-">
+				<reportElement mode="Transparent" x="435" y="166" width="119" height="18" uuid="8c2e5b82-bebc-4fe2-bcd0-b4eae295ea10">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="false" isItalic="false"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kwitansi_sisaBayar}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="62" y="166" width="492" height="1" uuid="173f8600-58d6-4220-9bb3-bc690ae53279"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="37" splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="165">
+			<staticText>
+				<reportElement x="373" y="95" width="182" height="20" uuid="9ded3089-eb46-4a82-bdbd-8cb17afdf139"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Mansyur Tidore, S.E, MBA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="373" y="25" width="182" height="20" uuid="0e866249-f4ca-487c-af99-35ba20e47593"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. SYALAM UTAMA SEJAHTERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="2" width="139" height="20" uuid="903491f2-8229-4ab5-925c-47ce61448152"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="115" width="100" height="20" uuid="5eb759e1-f0a8-437f-9f67-de81388b8594"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Direktur Utama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="145" width="23" height="20" uuid="43c84267-c15f-4f76-ac6c-dd2f42e77d86"/>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[Hal.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="520" y="145" width="35" height="20" uuid="8e10fa53-808b-4d28-9441-38eea4ed27db"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

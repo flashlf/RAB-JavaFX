@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SuratPenawaranHarga" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Key" uuid="eb26ae77-1d8d-49f2-818f-fafc5812caef">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="404"/>
+	<parameter name="pathLogoHeader" class="java.lang.String">
+		<defaultValueExpression><![CDATA["O:\\IMAM\\RPL\\PEMROGRAMMAN VISUAL\\JavaFX\\RABFX\\misc\\logo.jpg"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pathWatermark" class="java.lang.String">
+		<defaultValueExpression><![CDATA["O:\\IMAM\\RPL\\PEMROGRAMMAN VISUAL\\JavaFX\\RABFX\\misc\\logo.png"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="suratMulai" class="java.lang.String"/>
+	<parameter name="terbilang" class="java.lang.String"/>
+	<parameter name="durasiHari" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nilaiProyek" class="java.lang.String"/>
+	<parameter name="namaKonsumen" class="java.lang.String"/>
+	<parameter name="alamatKonsumen" class="java.lang.String"/>
+	<parameter name="deskripsiPekerjaan" class="java.lang.String"/>
+	<parameter name="kodeProyek" class="java.lang.String"/>
+	<parameter name="noSurat" class="java.lang.String"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image scaleImage="Clip" isUsingCache="false" onErrorType="Icon">
+				<reportElement x="296" y="545" width="259" height="257" uuid="19cb235a-8d21-42e6-84c7-57d4b7b766fb"/>
+				<imageExpression><![CDATA[$P{pathWatermark}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="1" width="379" height="34" forecolor="#123456" uuid="305f0b30-e36f-462a-b4db-68223460e6be">
+					<property name="net.sf.jasperreports.export.pdf.tag.h1"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Segoe UI" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. SYALAM UTAMA SEJAHTERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="35" width="342" height="46" uuid="88b11357-577b-4826-86f9-9a2acc5f3905"/>
+				<textElement textAlignment="Left">
+					<font fontName="Times New Roman" size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Raya Hankam No.10F, Kel. Jati Warna, Kec. Pondok Melati, RT.006/RW.009, Kota Bekasi, Jawa Barat 17415.
+Email : syalamutamasejahtera@gmail.com, Telp. (021) 8498 1190]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="81" width="555" height="1" uuid="e23a54e0-be85-43f1-b219-f26a61227ca8"/>
+				<graphicElement>
+					<pen lineWidth="2.5" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image isUsingCache="false" onErrorType="Icon">
+				<reportElement x="26" y="3" width="64" height="64" uuid="aee8a32d-9ac7-4448-8496-fa5058ed1b59"/>
+				<imageExpression><![CDATA[$P{pathLogoHeader}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="141" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="44" forecolor="#FFFFFF" backcolor="#123456" uuid="46849818-435b-416a-9588-b556f07c7c51"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="29" y="11" width="50" height="20" forecolor="#FFFFFF" uuid="0c2bf830-17dc-4ad5-81c8-e32235cba384"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nomor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="11" width="11" height="20" forecolor="#FFFFFF" uuid="2cf627dd-e402-44b3-9cdf-76dab7b30c7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="11" width="39" height="20" forecolor="#FFFFFF" uuid="ed9d5e8d-a33a-4220-a463-296dfa0ab577"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="443" y="11" width="90" height="20" forecolor="#FFFFFF" uuid="84b9d074-48d9-42bc-9ab9-7fb8b6fe3155"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="11" width="138" height="20" forecolor="#FFFFFF" uuid="7ae86e08-c42e-4d07-89d3-79c62ed827c2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{noSurat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="29" y="47" width="61" height="19" uuid="091ccbd3-279b-47ca-85e5-9cbad3e9c1d8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Kepada Yth.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="29" y="66" width="254" height="20" uuid="f08c46fc-4b40-4ceb-8e2f-a4952e726f6a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namaKonsumen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="29" y="86" width="226" height="34" uuid="4257284a-70b5-49d7-83df-a5f9bb3cbc67"/>
+				<textElement markup="html">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{alamatKonsumen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="79" y="120" width="11" height="20" uuid="26d8db25-9a49-43bf-a96d-a3796f3e604c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="120" width="50" height="20" uuid="01ff31f4-46ac-430e-ad2b-b8f31026d588"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Perihal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="120" width="193" height="20" uuid="c04c754f-916e-4f83-9d1a-a3bc8ca748da"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Penawaran Pekerjaan]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="379" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="29" y="1" width="504" height="164" uuid="de6a1d32-5c9f-4e75-890a-d207e6e8bec6"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["    Sehubungan dengan pengumuman pendaftaran dan pengambilan Dokumen Pengadaan Nomor <b>"+$P{kodeProyek}+"</b>, tanggal <b>"+$P{suratMulai}+"</b> dan setelah kami pelajari dengan saksama Dokumen Pengadaan dan Berita Acara Pemberian Penjelasan [serta adendum Dokumen Pengadaan], dengan ini kami mengajukan penawaran untuk pekerjaan <b>"
++$P{deskripsiPekerjaan}+"</b> Sebesar: Rp. <b>"+$P{nilaiProyek}+"</b> (Terbilang <b>"+$P{terbilang}+")</b>\n    Penawaran ini sudah memperhatikan ketentuan dan persyaratan yang tercantum dalam Dokumen Pengadaan untuk melaksanakan pekerjaan tersebut di atas."
++" Kami akan melaksanakan pekerjaan tersebut dengan jangka waktu pelaksanaan selama <b>"+
+$P{durasiHari}+"</b> hari kalender."+" Penawaran ini berlaku selama <b>2 minggu</b> (Dua).\nSesuai dengan persyaratan, bersama surat penawaran ini kami lampirkan:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="165" width="482" height="65" uuid="57988d82-fa42-4a29-a4dc-728d36beba9f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1. Hasil pemindaian(scan) Jaminan Penawaran asli\n"+
+"2. Daftar Kuantitas dan Harga\n"+
+"3. Hasil pemindaian Surat perjanjian kemitraan/kerja sama operasi\n"+
+"4. Dokumen penawaran teknis, terdiri dari:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="223" width="461" height="125" uuid="7cd31628-5773-4426-9250-51017bf6567d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["a) Metode pelaksanaan\n"+
+"b) Jadwal Waktu Pelaksanaan\n"+
+"c) Identitas (jenis, tipe dan merek) barang yang ditawarkan(apabila dipersyaratkan)\n"+
+"d) Jaminan purnajual(apabila dipersyaratkan)\n"+
+"e) Jenis, kapasitas, komposisi dan jumlah peralatan\n"+
+"f) Spesifikasi teknis\n"+
+"h) Daftar personil inti\n"+
+"i) Tenaga teknis (apabila dipersyaratkan)\n"+
+"j) Bagian pekerjaan yang akan disubkontrak-kan."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="348" width="482" height="30" uuid="f5f39c1c-e292-4c08-ab4f-75e24863dd1b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["5. Formulir rekapitulasi perhitungan Tingkat Komponen Dalam Negeri (TKDN)\n"+
+"6. Dokumen lain yang dipersyaratkan."]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="158">
+			<staticText>
+				<reportElement x="351" y="45" width="182" height="20" uuid="e05be113-6a74-4091-9354-65079e953fbd"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. SYALAM UTAMA SEJAHTERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="22" width="139" height="20" uuid="fce8b7c6-03f2-4bfe-bdb8-0abc0b26993a"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Mengetahui,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="443" y="2" width="90" height="20" uuid="0eae375a-7d70-43b7-aa47-8cb26beae34e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="394" y="2" width="47" height="20" uuid="7c209b92-2521-4fef-9845-f42e9a026b1c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="135" width="100" height="20" uuid="3ba7c418-25ba-4f72-b3ad-dc98e6c2e6dc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Direktur Utama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="115" width="182" height="20" uuid="dcb483bc-1f91-4be9-a453-4995c9f09ddb"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Mansyur Tidore, S.E, MBA.]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="29" y="0" width="504" height="32" uuid="751ea6a5-ab35-471f-b408-fd8fa348d586"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[     Dengan disampaikannya Surat Penawaran ini, maka kami menyatakan sanggup dan akan tunduk pada semua ketentuan yang tercantum dalam Dokumen Pengadaan.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

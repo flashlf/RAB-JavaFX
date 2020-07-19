@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuLaporanController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="10.0" layoutY="16.0" prefHeight="379.0" prefWidth="701.0" style="-fx-background-color: #FFF; -fx-background-radius: 5px;">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" color="#0000004d" height="40.0" radius="15.75" width="25.0" />
+         </effect>
+         <children>
+            <Pane layoutY="85.0" prefHeight="293.0" prefWidth="701.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <TextArea fx:id="txDeskripsi" editable="false" layoutX="280.0" layoutY="-49.0" prefHeight="38.0" prefWidth="158.0" />
+                  <Label alignment="CENTER" layoutX="174.0" layoutY="25.0" prefHeight="48.0" prefWidth="107.0" text="Analisa Harga Satuan Pekerjaan" textAlignment="CENTER" textFill="#3a1c9d" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="297.0" layoutY="25.0" prefHeight="48.0" prefWidth="107.0" text="Rincian Anggaran Biaya" textAlignment="CENTER" textFill="#3a1c9d" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="419.0" layoutY="25.0" prefHeight="48.0" prefWidth="107.0" text="Bill of Quantity" textAlignment="CENTER" textFill="#3a1c9d">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="110.0" layoutY="159.0" prefHeight="20.0" prefWidth="107.0" text="Surat Tugas" textAlignment="CENTER" textFill="#3a1c9d">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="231.0" layoutY="159.0" prefHeight="20.0" prefWidth="117.0" text="Penawaran Harga" textFill="#3a1c9d">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="356.0" layoutY="159.0" prefHeight="20.0" prefWidth="107.0" text="Kwitansi" textFill="#3a1c9d">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnAHSP" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="196.0" layoutY="81.0" mnemonicParsing="false" onAction="#printAHSP" prefHeight="64.0" prefWidth="64.0" styleClass="thumbnail-control" text="Print">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="PRINT" size="24" styleClass="thumbnail-icon" wrappingWidth="24.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnRAB" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="319.0" layoutY="81.0" mnemonicParsing="false" onAction="#printRAB" prefHeight="64.0" prefWidth="64.0" styleClass="thumbnail-control" text="Print">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="PRINT" size="24" styleClass="thumbnail-icon" wrappingWidth="24.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnSuratTugas" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="132.0" layoutY="189.0" mnemonicParsing="false" onAction="#printSuratTugas" prefHeight="64.0" prefWidth="64.0" styleClass="thumbnail-control" text="Print">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="PRINT" size="24" styleClass="thumbnail-icon" wrappingWidth="24.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnSPH" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="255.0" layoutY="189.0" mnemonicParsing="false" onAction="#printSPH" prefHeight="64.0" prefWidth="64.0" styleClass="thumbnail-control" text="Print">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="PRINT" size="24" styleClass="thumbnail-icon" wrappingWidth="24.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnKwitansi" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="378.0" layoutY="189.0" mnemonicParsing="false" onAction="#printKwitansi" prefHeight="64.0" prefWidth="64.0" styleClass="thumbnail-control" text="Print">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="PRINT" size="24" styleClass="thumbnail-icon" wrappingWidth="24.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnBoQ" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="441.0" layoutY="81.0" mnemonicParsing="false" onAction="#printBoQ" prefHeight="64.0" prefWidth="64.0" styleClass="thumbnail-control" text="Print">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="PRINT" size="24" styleClass="thumbnail-icon" wrappingWidth="24.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnRiwayatKwitansi" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="492.0" layoutY="189.0" mnemonicParsing="false" onAction="#printRiwayatKwitansi" prefHeight="64.0" prefWidth="64.0" styleClass="thumbnail-control" text="Riwayat Kwitansi" textFill="#3a1c9d">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="PRINT" size="24" styleClass="thumbnail-icon" wrappingWidth="24.0" />
+                     </graphic>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="471.0" layoutY="159.0" prefHeight="20.0" prefWidth="107.0" text="Riwayat Kwitansi" textFill="#3a1c9d">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="93.0" layoutY="12.0" prefHeight="38.0" prefWidth="172.0" text="Menu Laporan" textFill="#123456">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Separator layoutX="16.0" layoutY="84.0" prefHeight="3.0" prefWidth="674.0" />
+            <Button fx:id="btnPrintAll" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="662.0" layoutY="10.0" mnemonicParsing="false" onAction="#printAll" prefHeight="28.0" prefWidth="28.0" styleClass="thumbnail-control" text="Print Semua">
+               <graphic>
+                  <FontAwesomeIconView fill="#3a1c9d" glyphName="PRINT" styleClass="thumbnail-icon" wrappingWidth="12.0" />
+               </graphic>
+            </Button>
+            <MaterialDesignIconView fill="#123456" glyphName="CERTIFICATE" layoutX="30.0" layoutY="62.0" size="48" wrappingWidth="48.0" />
+            <Label layoutX="94.0" layoutY="44.0" prefHeight="28.0" prefWidth="56.0" text="Proyek :" textFill="#aeacac">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txProyekLaporan" editable="false" layoutX="142.0" layoutY="44.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="28.0" prefWidth="70.0" styleClass="textfield-transparent">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnListProyek" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="212.0" layoutY="44.0" mnemonicParsing="false" onAction="#changeProyek" prefHeight="28.0" prefWidth="28.0" styleClass="thumbnail-control" text="Edit">
+               <graphic>
+                  <FontAwesomeIconView fill="#3a1c9d" glyphName="LIST" size="12" styleClass="thumbnail-icon" wrappingWidth="12.0" />
+               </graphic>
+            </Button>
+            <Label layoutX="279.0" layoutY="13.0" prefHeight="20.0" prefWidth="107.0" text="Deskripsi Proyek" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="450.0" layoutY="13.0" orientation="VERTICAL" prefHeight="63.0" prefWidth="6.0" />
+            <Label layoutX="466.0" layoutY="14.0" prefHeight="20.0" prefWidth="80.0" text="Konsumen :" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txKonsumen" editable="false" layoutX="466.0" layoutY="36.0" prefHeight="38.0" prefWidth="146.0" />
+            <Label fx:id="txKodeKonsumen" layoutX="548.0" layoutY="14.0" prefHeight="20.0" prefWidth="64.0" text="K001" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Separator layoutX="10.0" layoutY="6.0" prefHeight="3.0" prefWidth="701.0" />
+   </children>
+</AnchorPane>

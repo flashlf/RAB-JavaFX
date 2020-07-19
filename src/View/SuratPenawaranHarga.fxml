@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="348.0" style="-fx-background-color: #123456;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SuratPenawaranHargaController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <HBox id="pnlUsername" layoutX="24.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="297.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="28.0" prefWidth="143.0" style="-fx-background-color: #f3c623;" text="No. Surat" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="2.0" />
+            <TextField fx:id="txNoSPH" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="169.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox id="pnlUsername" layoutX="24.0" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="297.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="28.0" prefWidth="144.0" style="-fx-background-color: #f3c623;" text="Kode Proyek" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="2.0" />
+            <TextField fx:id="txKodeProyek" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="141.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </TextField>
+            <Button fx:id="btnSearch" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#listProyek" prefHeight="28.0" prefWidth="34.0" styleClass="glyph-icon" text="SEARCH">
+               <graphic>
+                  <FontAwesomeIconView glyphName="LIST" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox id="pnlUsername" layoutX="24.0" layoutY="187.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="297.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="28.0" prefWidth="125.0" style="-fx-background-color: #f3c623;" text="Kode Konsumen" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="2.0" />
+            <TextField fx:id="txKodeKonsumen" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="166.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <Label layoutX="38.0" layoutY="104.0" text="Proyek" textFill="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="162.0" text="Nilai Taksiran " textFill="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProyek" alignment="TOP_LEFT" layoutX="84.0" layoutY="104.0" prefHeight="58.0" prefWidth="235.0" text="Rancangan masukan yaitu desain yang dirancang untuk menerimamasukan dari pengguna sistem. Rancangan masukan data ini harus dapatmemberikan penjelasan dari pemakai, baik dari bentuk maupun dari masukanmasukanyang harus di isi." textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+      <Label fx:id="lblJasa" layoutX="118.0" layoutY="162.0" prefHeight="17.0" prefWidth="201.0" text="1.612.233.551.500.000" textFill="WHITE" />
+      <HBox id="pnlUsername" layoutX="24.0" layoutY="249.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="125.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="28.0" prefWidth="59.0" style="-fx-background-color: #f3c623;" text="PPn" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="2.0" />
+            <TextField fx:id="txPPn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="62.0" text="0.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <Label layoutX="156.0" layoutY="250.0" prefHeight="27.0" prefWidth="16.0" text="\%" textFill="#f3c623">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="225.0" text="Konsumen" textFill="#b2b2b2">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblKonsumen" layoutX="114.0" layoutY="225.0" prefHeight="17.0" prefWidth="201.0" text="PT. Timah Tbk." textFill="WHITE" />
+      <HBox id="pnlUsername" layoutX="174.0" layoutY="249.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="125.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="28.0" prefWidth="74.0" style="-fx-background-color: #f3c623;" text="Profit" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="2.0" />
+            <TextField fx:id="txProfit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="56.0" text="0.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <Label layoutX="306.0" layoutY="251.0" prefHeight="27.0" prefWidth="16.0" text="\%" textFill="#f3c623">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <HBox id="pnlUsername" layoutX="24.0" layoutY="291.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="297.0" styleClass="panel-input">
+         <children>
+            <Label prefHeight="28.0" prefWidth="97.0" style="-fx-background-color: #f3c623;" text="Grand Total" textFill="#10375c">
+               <padding>
+                  <Insets left="15.0" right="15.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="18.0" prefWidth="2.0" />
+            <TextField fx:id="txGrandTotal" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="196.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="btnPrint" layoutX="195.0" layoutY="363.0" mnemonicParsing="false" onAction="#printSPH" prefHeight="32.0" prefWidth="124.0" styleClass="panel-input" text="Print Surat">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="PRINTER" size="18" styleClass="glyph-icon" wrappingWidth="18.0" />
+         </graphic>
+      </Button>
+      <Button fx:id="btnCancel" layoutX="22.0" layoutY="363.0" mnemonicParsing="false" onAction="#clearAll" prefHeight="32.0" prefWidth="124.0" styleClass="panel-input" text="Batal">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+         <graphic>
+            <MaterialDesignIconView glyphName="CLOSE_OCTAGON" size="18" styleClass="glyph-icon" wrappingWidth="18.0" />
+         </graphic>
+      </Button>
+      <Separator layoutX="19.0" layoutY="341.0" prefHeight="3.0" prefWidth="312.0" styleClass="panel-input" />
+   </children>
+</AnchorPane>

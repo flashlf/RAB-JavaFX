@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="headerProyek" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="735.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HeaderProyekController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="715.0" style="-fx-background-color: #123456;" styleClass="tile-panel" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+         <effect>
+            <DropShadow color="#00000099" />
+         </effect>
+         <children>
+            <Label layoutX="24.0" layoutY="27.0" text="Total Proyek" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Separator layoutX="527.0" layoutY="12.0" orientation="VERTICAL" prefHeight="155.0" prefWidth="6.0" styleClass="vLine" stylesheets="@Style.css" />
+            <ComboBox fx:id="cbUrutData" layoutX="552.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="112.0" styleClass="thumbnail-control" visibleRowCount="5" />
+            <ToggleButton fx:id="btnAsc" contentDisplay="GRAPHIC_ONLY" layoutX="671.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#tipeUrut" prefHeight="28.0" prefWidth="28.0" styleClass="thumbnail-control" text="ASC">
+               <toggleGroup>
+                  <ToggleGroup fx:id="TipePengurutan" />
+               </toggleGroup>
+               <graphic>
+                  <MaterialDesignIconView fx:id="CONTROL_ASC_ICON" glyphName="SORT_ASCENDING" size="14" styleClass="thumbnail-icon" />
+               </graphic>
+            </ToggleButton>
+            <Label layoutX="127.0" layoutY="27.0" text="Status Proyek" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <HBox layoutX="127.0" layoutY="62.0" prefHeight="25.0" prefWidth="90.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="17" wrappingWidth="16.0">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Label fx:id="lblProyekSelesai" prefHeight="17.0" prefWidth="92.0" text="Selesai" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin></Label>
+               </children>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="127.0" layoutY="95.0" prefHeight="25.0" prefWidth="90.0">
+               <children>
+                  <MaterialDesignIconView fill="WHITE" glyphName="CLOSE_CIRCLE" size="18" wrappingWidth="18.0" />
+                  <Label fx:id="lblProyekBelum" prefHeight="17.0" prefWidth="110.0" text="Belum" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="7.0" />
+                     </HBox.margin></Label>
+               </children>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </HBox>
+            <Label layoutX="241.0" layoutY="27.0" text="Proyek Terbaru" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="lblTotalProyek" alignment="CENTER" layoutX="24.0" layoutY="53.0" prefHeight="85.0" prefWidth="83.0" text="378" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblKdProyekTerbaru" layoutX="241.0" layoutY="61.0" prefHeight="28.0" prefWidth="101.0" text="B000" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#aeacac" glyphName="KEY_VARIANT" size="16" wrappingWidth="16.0" />
+               </graphic>
+            </Label>
+            <Button fx:id="btnSort" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="671.0" layoutY="99.0" mnemonicParsing="false" onAction="#sortData" prefHeight="28.0" prefWidth="28.0" styleClass="thumbnail-control" text="Selesai">
+               <graphic>
+                  <FontAwesomeIconView fill="#3a1c9d" glyphName="CHECK" styleClass="thumbnail-icon" wrappingWidth="12.0" />
+               </graphic>
+            </Button>
+            <TextField fx:id="txKriteriaFilter" layoutX="552.0" layoutY="99.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="28.0" prefWidth="112.0">
+               <styleClass>
+                  <String fx:value="thumbnail-control" />
+                  <String fx:value="textfieldss" />
+               </styleClass>
+            </TextField>
+            <Label layoutX="552.0" layoutY="27.0" text="Filter Data" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILTER" size="16" wrappingWidth="16.0" />
+               </graphic>
+            </Label>
+            <Label fx:id="lblDeskripsiProyekTerbaru" layoutX="241.0" layoutY="90.0" prefHeight="28.0" prefWidth="101.0" text="Pekerjaan programming" textFill="#aeacac">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#aeacac" glyphName="SCRIPT" size="16" wrappingWidth="16.0" />
+               </graphic>
+            </Label>
+            <Label fx:id="lblNilaiProyekTerbaru" layoutX="241.0" layoutY="119.0" prefHeight="28.0" prefWidth="101.0" text="25 Milyar" textFill="#aeacac">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#aeacac" glyphName="DIAMOND" size="16" wrappingWidth="16.0" />
+               </graphic>
+            </Label>
+            <Pane layoutX="358.0" prefHeight="179.0" prefWidth="166.0" style="-fx-background-color: #2170bf;">
+               <children>
+                  <Label layoutX="20.0" layoutY="29.0" text="Fokus Proyek" textFill="#ffd542">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblKdProyekFokus" layoutX="20.0" layoutY="61.0" prefHeight="28.0" prefWidth="120.0" text="B1337" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="KEY_VARIANT" size="16" wrappingWidth="16.0" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblDeskripsiProyekFokus" layoutX="20.0" layoutY="90.0" prefHeight="28.0" prefWidth="120.0" text="Meikarta" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="SCRIPT" size="16" wrappingWidth="16.0" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblNilaiProyekFokus" layoutX="20.0" layoutY="119.0" prefHeight="28.0" prefWidth="120.0" text="73 Triliun" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="DIAMOND" size="16" wrappingWidth="16.0" />
+                     </graphic>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

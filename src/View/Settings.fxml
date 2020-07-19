@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="720.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SettingsController">
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+   <children>
+      <Separator layoutY="3.0" prefHeight="0.0" prefWidth="720.0" />
+      <HBox layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="670.0" style="-fx-background-radius: 10px; -fx-background-color: #FFF; -fx-border-color: #FFF; -fx-border-radius: 10px;" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="250.0">
+               <children>
+                  <FontAwesomeIconView fill="#12335499" glyphName="DATABASE" layoutX="111.0" layoutY="311.0" size="256" wrappingWidth="109.9999988079071" />
+                  <Button graphicTextGap="7.0" layoutX="63.0" layoutY="288.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" styleClass="buttons" text="SAVE">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="CONTENT_SAVE" size="32" styleClass="glyphs-icon" wrappingWidth="32.0" />
+                     </graphic>
+                     <font>
+                        <Font name="Roboto Bold" size="14.0" />
+                     </font></Button>
+                  <Label layoutX="27.0" layoutY="60.0" prefHeight="23.0" prefWidth="194.0" text="CONFIGURATION" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="27.0" layoutY="33.0" prefHeight="23.0" prefWidth="194.0" text="DATABASE" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="380.0" prefWidth="426.0" style="-fx-background-color: #123456; -fx-background-radius: 0px 5px 5px 0px;">
+               <children>
+                  <Label layoutX="23.0" layoutY="321.0" text="Status :" textFill="WHITE">
+                     <font>
+                        <Font name="Sitka Text" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox id="pnlUsername" layoutX="44.0" layoutY="32.0" prefHeight="52.0" prefWidth="344.0" styleClass="Panel-Input-Home">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #FFF;" text="Hostname">
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <TextField fx:id="txHostname" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="236.0" styleClass="textfield-transparent">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox id="pnlUsername" layoutX="44.0" layoutY="93.0" prefHeight="44.0" prefWidth="161.0" styleClass="Panel-Input-Home">
+                     <children>
+                        <MaterialDesignIconView glyphName="ACCOUNT" size="24" strokeLineCap="ROUND" strokeType="INSIDE" styleClass="glyphs-icon" wrappingWidth="24.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <TextField fx:id="txUsername" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="109.0" styleClass="textfield-transparent">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox id="pnlUsername" layoutX="226.0" layoutY="93.0" prefHeight="32.0" prefWidth="161.0" styleClass="Panel-Input-Home">
+                     <children>
+                        <MaterialDesignIconView glyphName="KEY_VARIANT" size="24" strokeLineCap="ROUND" strokeType="INSIDE" styleClass="glyphs-icon" wrappingWidth="24.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <TextField fx:id="txPassword" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="110.0" styleClass="textfield-transparent">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox id="pnlUsername" layoutX="44.0" layoutY="149.0" prefHeight="52.0" prefWidth="344.0" styleClass="Panel-Input-Home">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #FFF;" text="Database">
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <TextField fx:id="txDatabase" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="237.0" styleClass="textfield-transparent">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox id="pnlUsername" layoutX="44.0" layoutY="210.0" prefHeight="52.0" prefWidth="226.0" styleClass="Panel-Input-Home">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #FFF;" text="Port">
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <TextField fx:id="txPort" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="120.0" styleClass="textfield-transparent">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnEditProyek" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="44.0" layoutY="274.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="28.0" prefWidth="28.0" styleClass="thumbnail-control" text="Edit">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="UNLOCK_ALT" size="12" styleClass="thumbnail-icon" wrappingWidth="8.0" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="CONTROL_RESET" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="79.0" layoutY="274.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#resetSetting" prefHeight="28.0" prefWidth="28.0" styleClass="thumbnail-control" text="Selesai">
+                     <graphic>
+                        <FontAwesomeIconView fill="#3a1c9d" glyphName="UNDO" styleClass="thumbnail-icon" wrappingWidth="12.0" />
+                     </graphic>
+                  </Button>
+                  <ToggleButton fx:id="CONTROL_LOCK" layoutX="113.0" layoutY="274.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toggleSetting" prefHeight="28.0" prefWidth="28.0" styleClass="thumbnail-control">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="CONTROL_ICON_LOCK" fill="#3a1c9d" glyphName="UNLOCK_ALT" size="12" styleClass="thumbnail-icon" wrappingWidth="8.0" />
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow color="#0000004d" />
+         </effect>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="35.0" top="15.0" />
+   </padding>
+</AnchorPane>
